@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare | e-Healthcare Website</title>
+
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- bootstrap cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css">
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+        <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href=""><img src="/images (6).jpg" width="125px"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Products</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contacts</a></li>
+                    <li><a href="">Accounts</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"><img src="/download (1).png" width="30px" height="30px"></a>
+            <img src="/download.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+        </div>
+
+        <!-------- account page------>
+
+    <div class="accont-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="/download (5).jpg" width="100%">
+                </div>
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-container">
+                            <span onclick="login()">Login</span>
+                            <span onclick="register()">Register</span>
+                            <hr id="Indicator">
+                        </div>
+
+                        <form id="LoginForm">
+                            <input type="text" placeholder="Username">
+                            <input type="password" placeholder="Password">
+                            <button type="submit" class="btn">Login</button>
+                            <a href="">Forgot password</a>
+                        </form>
+                         
+                        <form id="RegForm">
+                            <input type="text" placeholder="Username">
+                            <input type="email" placeholder="Email">
+                            <input type="password" placeholder="Password">
+                            <button type="submit" class="btn">Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------- footer------->
+
+ <div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+               <h3>Download Our App</h3>
+               <p>Download App for Android and ios mobile phone</p>
+               <div class="app-logo">
+                <img src="/download (6).png">
+                <img src="/images.png">
+               </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="/images (6).jpg">
+                <p>Our purpose is to enhance the quality of life.</p>
+             </div>
+            
+             <div class="footer-col-3">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blogs</li>
+                    <li>Return Policy</li>
+                    <li>Join Affiliate</li>
+                </ul>
+             </div>
+             <br>
+             <div class="footer-col-4">
+                <h3>Follow us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>YouTube</li>
+                </ul>
+             </div>
+        </div>
+        <hr>
+        <p class="Copyright">Copyright 2023 - Khabane Tutorials</p>
+    </div>
+ </div> 
+
+ <!-------js for toggle Form------>
+
+ <script>
+
+    var LoginForm = document.getElementById("LoginForm");
+    var RegForm = document.getElementById("RegForm");
+    var Indicator = document.getElementById("Indicator");
+
+    function register(){
+        RegForm.stle.transform = "translateX(0px)";
+        LoginForm.stle.transform = "translateX(0px)";
+        Indicator.stle.transform = "translateX(100px)";
+    }
+
+    function login(){
+        RegForm.stle.transform = "translateX(300px)";
+        LoginForm.stle.transform = "translateX(300px)";
+        Indicator.stle.transform = "translateX(0px)";
+    }
+
+ </script>
+
+
+</body>
+</html>
